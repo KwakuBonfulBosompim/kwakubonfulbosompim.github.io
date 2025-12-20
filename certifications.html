@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications | Kwaku Bonful Bosompim</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #0F4C81, #00BFA6);
+      text-align: center;
+      min-height: 100vh;
+    }
 
+    /* Navigation Bar */
+    nav {
+      width: 100%;
+      background:#0F4C81;
+      padding: 18px 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    nav a:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    /* Main Content */
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 120px 20px 40px 20px; /* push content below nav */
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-bottom: 1.5em;
+      line-height: 1.5;
+    }
+
+    /* Buttons */
+    a.button {
+      background-color: #FFB03B;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      margin: 5px;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      display: inline-block;
+    }
+    a.button:hover {
+      background-color: #e29b30;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Section Styling */
+    .section {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px 20px;
+      margin-top: 50px;
+      width: 100%;
+      text-align: left;
+    }
+    .section h2 {
+      text-align: center;
+    }
+    .certificate-list {
+      list-style: none;
+      padding: 0;
+    }
+    .certificate-list p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+      p { font-size: 1rem; }
+      nav { padding: 15px 0; gap: 15px; }
+      .section { padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="videos.html">Popular Videos</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="content">
+
+    <!-- Hero Section -->
+    <section class="section">
+      <h1>Certifications</h1>
+      <p>Here is a full list of my certifications, reflecting my professional and academic achievements in Data Analytics, Finance, and Football Coaching.</p>
+    </section>
+
+    <!-- Full Certifications List -->
+    <section class="section">
+      <h2>My Certifications</h2>
+      <div class="certificate-list">
+        <p>Google Prompting Essentials — Google / BIT, Berlin (Dec 2025)</p>
+        <p>Google AI Essentials — Google / BIT, Berlin (Dec 2025)</p>
+        <p>DFB-Basis-Coach inklusiv – "Doppelpass", Berlin (Jun 2025)</p>
+        <p>AI For Business — Berlin School of Business & Innovation, Berlin (Feb 2024)</p>
+        <!-- Add more certificates as needed -->
+      </div>
+      <a href="assets/docs/KwakuBonfulBosompim_CV.pdf" class="button">Download Full CV</a>
+    </section>
+
+  </div>
+
+</body>
+</html>
