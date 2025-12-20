@@ -48,7 +48,7 @@
       justify-content: center;
       align-items: center;
       padding: 120px 20px 40px 20px; /* push content below nav */
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
@@ -64,24 +64,6 @@
       line-height: 1.5;
     }
 
-    /* Buttons */
-    a.button {
-      background-color: #FFB03B;
-      color: white;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-      margin: 5px;
-      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      display: inline-block;
-    }
-    a.button:hover {
-      background-color: #e29b30;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
     /* Section Styling */
     .section {
       background-color: rgba(255, 255, 255, 0.1);
@@ -89,19 +71,46 @@
       padding: 30px 20px;
       margin-top: 50px;
       width: 100%;
-      text-align: left;
-    }
-    .section h2 {
       text-align: center;
     }
-    .certificate-list {
-      list-style: none;
-      padding: 0;
+
+    /* Grid for certificates */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
-    .certificate-list p {
+
+    .card {
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
       margin-bottom: 10px;
-      font-size: 1rem;
-      line-height: 1.5;
+    }
+
+    /* Buttons (optional if you want download buttons) */
+    a.button {
+      background-color: #FFB03B;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    a.button:hover {
+      background-color: #e29b30;
+      transform: translateY(-3px);
     }
 
     /* Responsive */
@@ -133,16 +142,22 @@
       <p>Here are some of my certifications, highlighting my professional and academic achievements in Data Analytics, Finance, and Football Coaching.</p>
     </section>
 
-    <!-- Full Certifications List -->
+    <!-- Certificates Grid -->
     <section class="section">
       <h2>Certifications</h2>
-      <div class="certificate-list">
-        <p>UEFA C-License - Berliner Fussball-Verband (Dec 2025)</p>
-        <p>Google Prompting Essentials — Google / BIT, Berlin (Dec 2025)</p>
-        <p>Google AI Essentials — Google / BIT, Berlin (Dec 2025)</p>
-        <p>DFB-Basis-Coach inklusiv – "Doppelpass", Berlin (Jun 2025)</p>
-        <p>AI For Business — Berlin School of Business & Innovation, Berlin (Feb 2024)</p>
-        <!-- Add more certificates as needed -->
+      <div class="grid certificate-list">
+        <div class="card">
+          <img src="assets/certificates/UEFA_C_Cert.jpg" alt="UEFA C Certificate">
+          <p>UEFA C License</p>
+        </div>
+        <div class="card">
+          <img src="assets/certificates/Google_Prompting_Essentials.jpg" alt="Google Prompting Essentials Certificate">
+          <p>Google Prompting Essentials</p>
+        </div>
+        <div class="card">
+          <img src="assets/certificates/Google_AI_Essentials_Cert.jpg" alt="Google AI Essentials Certificate">
+          <p>Google AI Essentials</p>
+        </div>
       </div>
     </section>
 
