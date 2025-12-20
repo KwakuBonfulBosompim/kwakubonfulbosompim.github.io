@@ -1,170 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kwaku Bonful Bosompim | Portfolio</title>
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      background: linear-gradient(135deg, #0F4C81, #00BFA6);
-      text-align: center;
-      min-height: 100vh;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kwaku Bonful Bosompim | Portfolio</title>
+<style>
+body {
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:white;
+  background: linear-gradient(135deg, #0F4C81, #00BFA6);
+  text-align:center;
+  min-height:100vh;
+}
 
-    /* Navigation Bar */
-    nav {
-      width: 100%;
-      background:#0F4C81;
-      padding: 18px 0;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-    nav a:hover {
-      opacity: 0.85;
-      transform: scale(1.05);
-    }
+/* Navigation */
+nav {
+  width:100%;
+  background:#0F4C81;
+  padding:18px 0;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+nav a {
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+nav a:hover {
+  opacity:0.85;
+  transform:scale(1.05);
+}
 
-    /* Main Content */
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 120px 20px 40px 20px; /* push content below nav */
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+/* Hero */
+.hero {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-height:80vh;
+  padding:120px 20px 40px 20px;
+}
+.hero h1 { font-size:2.8rem; margin-bottom:0.5em; }
+.hero p { font-size:1.2rem; max-width:700px; line-height:1.5; margin-bottom:20px; }
+.hero .buttons { display:flex; gap:15px; flex-wrap:wrap; }
+.hero .buttons a {
+  background-color:#FFB03B;
+  color:white;
+  text-decoration:none;
+  padding:12px 25px;
+  border-radius:25px;
+  font-weight:bold;
+  transition:0.3s ease;
+}
+.hero .buttons a:hover {
+  background-color:#e29b30;
+  transform:translateY(-3px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
 
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5em;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin-bottom: 1.5em;
-      line-height: 1.5;
-    }
+/* Section Styling */
+.section {
+  background-color: rgba(255,255,255,0.1);
+  border-radius:15px;
+  padding:30px 20px;
+  margin-top:50px;
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+.section h2 { text-align:center; margin-bottom:20px; }
 
-    /* Buttons */
-    a.button {
-      background-color: #FFB03B;
-      color: white;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-      margin: 5px;
-      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      display: inline-block;
-    }
-    a.button:hover {
-      background-color: #e29b30;
-      transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
+/* Grid Preview */
+.grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.card {
+  background-color: rgba(255,255,255,0.1);
+  border-radius:10px;
+  padding:15px;
+  text-align:center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+.card img { width:100%; border-radius:10px; margin-bottom:10px; }
 
-    /* Sections */
-    .section {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 30px 20px;
-      margin-top: 50px;
-      width: 100%;
-      text-align: left;
-    }
-    .section h2 {
-      text-align: center;
-    }
-    .section ul {
-      list-style: none;
-      padding: 0;
-    }
-    .section ul li, .section p {
-      margin-bottom: 10px;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    /* Grid Previews */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .card {
-      background-color: rgba(255,255,255,0.1);
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.5rem; }
-      p { font-size: 1rem; }
-      nav { padding: 15px 0; gap: 15px; }
-      .section { padding: 20px 15px; }
-    }
-  </style>
+/* Responsive */
+@media(max-width:600px){
+  .hero h1 { font-size:2rem; }
+  .hero p { font-size:1rem; }
+}
+</style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="certifications.html">Certifications</a>
-    <a href="videos.html">Popular Videos</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="certifications.html">Certifications</a>
+  <a href="videos.html">Popular Videos</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-  <!-- Main Content -->
-  <div class="content">
-    <!-- Hero Section -->
-    <section class="hero">
-      <h1>Welcome to Kwaku Bonful Bosompim's Portfolio</h1>
-      <p>MSc Finance & Data Analytics | Online Data Analyst | UEFA C Licensed Coach<br>
-         Exploring Data, Finance & Investment, Artificial Intelligence and Football development, one project at a time.</p>
-    </section>
-
-    <!-- My Promise -->
-    <section class="section">
-      <p>
-        I commit to delivering <strong>high-quality data analytics and finance solutions</strong> through my projects, combining rigorous analysis with real-world impact. As a UEFA C Licensed Coach, I bring dedication, discipline, and continuous learning to every project and collaboration.
-      </p>
-    </section>
-
-    <!-- Popular Videos Preview -->
-    <section class="section">
-        </div>
-      </div>
-    </section>
-
+<div class="hero">
+  <h1>Welcome to Kwaku Bonful Bosompim's Portfolio</h1>
+  <p>MSc Finance & Data Analytics | Online Data Analyst | UEFA C Licensed Coach<br>
+     Exploring Data, Finance, AI, and Football development — one project at a time.</p>
+  <div class="buttons">
+    <a href="projects.html">View Projects</a>
+    <a href="certifications.html">View Certifications</a>
+    <a href="videos.html">Watch Videos</a>
   </div>
+</div>
+
+<!-- My Promise -->
+<section class="section">
+  <h2>My Promise</h2>
+  <p>
+    I commit to delivering <strong>high-quality data analytics and finance solutions</strong> through my projects,
+    combining rigorous analysis with real-world impact. As a UEFA C Licensed Coach, I bring dedication,
+    discipline, and continuous learning to every project and collaboration.
+  </p>
+</section>
+
+<!-- Videos Preview -->
+<section class="section">
+  <h2>Video Preview</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="assets/videos/certificate_presentation.jpg" alt="Certificate Presentation">
+      <p>Certificate Presentation</p>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
