@@ -4,140 +4,187 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kwaku Bonful Bosompim | Portfolio</title>
+
 <style>
-/* --- General Styles --- */
+/* ===== General Styles ===== */
 body {
-  margin:0;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color:white;
+  color: white;
   background: linear-gradient(135deg, #0F4C81, #00BFA6);
-  text-align:center;
+  text-align: center;
 }
 
-/* --- Navigation --- */
+/* ===== Navigation ===== */
 nav {
-  width:100%;
-  background:#0F4C81;
-  padding:15px 0;
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  position:fixed;
-  top:0;
-  left:0;
-  z-index:1000;
-  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  width: 100%;
+  background: #0F4C81;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  flex-wrap: wrap;
 }
+
 nav a {
-  color:white;
-  text-decoration:none;
-  font-weight:bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
+
 nav a:hover {
-  opacity:0.85;
-  transform:scale(1.05);
+  opacity: 0.85;
+  transform: scale(1.05);
 }
 
-/* --- Hero Section --- */
+nav a.cv {
+  background-color: #FFB03B;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* ===== Hero Section ===== */
 .hero {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  min-height:70vh;
-  padding:140px 20px 40px 20px; /* top padding to avoid nav overlap */
-}
-.hero h1 {
-  font-size:2.5rem;
-  margin-bottom:0.5em;
-  line-height:1.2;
-}
-.hero p {
-  font-size:1.2rem;
-  max-width:700px;
-  line-height:1.5;
-  margin-bottom:20px;
-}
-.hero .buttons {
-  display:flex;
-  gap:15px;
-  flex-wrap:wrap;
-}
-.hero .buttons a {
-  background-color:#FFB03B;
-  color:white;
-  text-decoration:none;
-  padding:12px 25px;
-  border-radius:25px;
-  font-weight:bold;
-  transition:0.3s ease;
-}
-.hero .buttons a:hover {
-  background-color:#e29b30;
-  transform:translateY(-3px);
-  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 140px 20px 40px 20px;
 }
 
-/* --- Section Styling --- */
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 750px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.hero .buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero .buttons a {
+  background-color: #FFB03B;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.hero .buttons a:hover {
+  background-color: #e29b30;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== Section Styling ===== */
 .section {
   background-color: rgba(255,255,255,0.1);
-  border-radius:15px;
-  padding:30px 20px;
-  margin-top:40px;
-  max-width:90%;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:left;
-}
-.section h2 {
-  text-align:center;
-  margin-bottom:20px;
-  font-size:1.8rem;
-}
-.section p {
-  font-size:1rem;
-  line-height:1.5;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 900px;
+  text-align: left;
 }
 
-/* --- Responsive --- */
-@media(max-width:900px){
-  .hero h1 { font-size:2.2rem; }
-  .hero p { font-size:1.1rem; }
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
-@media(max-width:600px){
-  .hero {
-    padding:100px 15px 30px 15px;
-  }
-  .hero h1 { font-size:1.8rem; }
-  .hero p { font-size:1rem; }
+
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1.1rem; }
+}
+
+@media (max-width: 600px) {
   nav {
-    flex-direction:column;
-    gap:10px;
-    padding:10px 0;
+    gap: 10px;
+    padding: 10px 0;
   }
-  .hero .buttons { flex-direction:column; gap:10px; }
-  .section { padding:20px 15px; margin-top:30px; }
-  .section h2 { font-size:1.5rem; }
+
+  .hero {
+    padding: 110px 15px 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero .buttons a {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  .section {
+    padding: 20px 15px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
 }
 </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
+<!-- ===== Navigation ===== -->
 <nav>
   <a href="index.html">Home</a>
   <a href="projects.html">Projects</a>
   <a href="certifications.html">Certifications</a>
   <a href="videos.html">Popular Videos</a>
   <a href="contact.html">Contact</a>
+  <a href="https://drive.google.com/file/d/1iEnv4A72Rxo8eh0_oxmwifEK-O7qG845/view?usp=sharing"
+     class="cv" target="_blank" rel="noopener">
+     CV
+  </a>
 </nav>
 
-<!-- Hero Section -->
+<!-- ===== Hero ===== -->
 <div class="hero">
   <h1>Welcome to Kwaku Bonful Bosompim's Portfolio</h1>
-  <p>Applied Research & Analytics | Finance | Data | Operations | Technology | UEFA C Licensed Coach<br>
-     Exploring research, analytics, finance, technology, and real-world operations — one project at a time.</p>
+  <p>
+    Applied Research & Analytics | Finance | Data | Operations | Technology | UEFA C Licensed Coach<br>
+    Exploring research, analytics, finance, technology, and real-world operations — one project at a time.
+  </p>
+
   <div class="buttons">
     <a href="projects.html">View Projects</a>
     <a href="certifications.html">View Certifications</a>
@@ -145,15 +192,26 @@ nav a:hover {
   </div>
 </div>
 
-<!-- About Me Section -->
+<!-- ===== About Me ===== -->
 <section class="section">
   <h2>About Me</h2>
   <p>
-I am an applied research and analytics professional with experience across finance, data analytics, operations, and technology. I hold a Master’s degree in Finance and Investment and am currently pursuing a Master’s in Data Analytics, alongside the Microsoft IT Support Professional Certificate, to strengthen my technical and systems-level understanding.
+    I am an applied research and analytics professional with experience across finance, data analytics,
+    operations, and technology. I hold a Master’s degree in Finance and Investment and am currently
+    pursuing a Master’s in Data Analytics, alongside the Microsoft IT Support Professional Certificate,
+    to strengthen my technical and systems-level understanding.
+  </p>
 
-Alongside my professional work, I am a UEFA C-Licensed football coach with experience in both community and competitive settings. I also have experience in logistics, commodity trading (including cocoa), and real estate operations.
+  <p>
+    Alongside my professional work, I am a UEFA C-Licensed football coach with experience in both
+    community and competitive settings. I also have experience in logistics, commodity trading
+    (including cocoa), and real estate operations.
+  </p>
 
-I am interested in research, analytics, IT support, and operations-oriented roles, particularly those that value interdisciplinary skills, evidence-based thinking, and collaboration across technical and non-technical teams.
+  <p>
+    I am interested in research, analytics, IT support, and operations-oriented roles that value
+    interdisciplinary skills, evidence-based thinking, and collaboration across technical and
+    non-technical teams.
   </p>
 </section>
 
