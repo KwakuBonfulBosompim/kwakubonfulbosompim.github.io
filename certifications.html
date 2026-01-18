@@ -5,85 +5,85 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Certifications | Kwaku Bonful Bosompim</title>
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    background: linear-gradient(135deg, #0F4C81, #00BFA6);
-    text-align: center;
-    min-height: 100vh;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background: linear-gradient(135deg, #0F4C81, #00BFA6);
+  text-align: center;
+  min-height: 100vh;
+}
 
-  /* Navigation */
-  nav {
-    width: 100%;
-    background: #0F4C81;
-    padding: 18px 0;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-  nav a:hover { opacity: 0.85; transform: scale(1.05); }
+nav {
+  width: 100%;
+  background:#0F4C81;
+  padding: 18px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+nav a:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
 
-  /* Main content */
-  .content {
-    padding: 140px 20px 40px 20px; /* adjusted for fixed nav */
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-  h1, h2 { margin-bottom: 15px; }
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
+h1, h2 { margin-bottom: 15px; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
 
-  p { font-size: 1.1rem; max-width: 700px; margin: 10px auto 20px auto; line-height: 1.5; }
+p { font-size: 1.1rem; max-width: 700px; margin-bottom: 1.5em; line-height: 1.5; }
 
-  /* Certificates grid */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-    width: 100%;
-  }
+/* Grid for certificates */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
 
-  .card {
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  }
-  .card img {
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
+.card {
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
 
-  /* Responsive */
-  @media (max-width: 600px){
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.5rem; }
-    p { font-size: 1rem; }
-    .grid { gap: 15px; }
-    nav { flex-direction: column; gap: 10px; padding: 10px 0; }
-  }
+.card img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  p { font-size: 1rem; }
+  .grid { gap: 15px; }
+}
 </style>
 </head>
 <body>
@@ -100,7 +100,7 @@
 <!-- Main Content -->
 <div class="content">
   <h1>My Certifications</h1>
-  <p>Here is a list of my certifications, highlighting my professional and academic achievements in Data Analytics, Finance, and Football Coaching.</p>
+  <p>Here are some of my certifications, highlighting my professional and academic achievements in Data Analytics, Finance, and Football Coaching.</p>
 
   <div class="grid">
     <div class="card">
@@ -116,8 +116,8 @@
       <p>Google AI Essentials — Dec 2025</p>
     </div>
     <div class="card">
-      <img src="assets/certificates/Microsoft_Introduction_to_computers.jpg" alt="Microsoft Introduction to Computers Certificate">
-      <p>Microsoft Introduction to Computers — Dec 2025</p>
+      <img src="assets/certificates/Microsoft_Introduction_to_Secure_Networking.jpg" alt="Microsoft Introduction to Secure Networking Certificate">
+      <p>Microsoft Introduction to Secure Networking — Jan 2026</p>
     </div>
   </div>
 </div>
