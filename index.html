@@ -15,11 +15,35 @@ body {
   text-align: center;
 }
 
+/* ===== Profile Photo ===== */
+.profile-photo {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  z-index: 1100;
+}
+
+.profile-photo img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  background: white;
+}
+
+@media (max-width: 600px) {
+  .profile-photo img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /* ===== Navigation ===== */
 nav {
   width: 100%;
   background: #0F4C81;
-  padding: 15px 0;
+  padding: 15px 0 15px 80px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -125,7 +149,7 @@ nav a.cv {
 @media (max-width: 600px) {
   nav {
     gap: 10px;
-    padding: 10px 0;
+    padding: 10px 0 10px 70px;
   }
 
   .hero {
@@ -163,6 +187,11 @@ nav a.cv {
 </head>
 
 <body>
+
+<!-- ===== Profile Photo ===== -->
+<div class="profile-photo">
+  <img src="assets/profile.jpeg" alt="Kwaku Bonful Bosompim">
+</div>
 
 <!-- ===== Navigation ===== -->
 <nav>
