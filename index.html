@@ -141,6 +141,47 @@ nav a.cv {
   line-height: 1.6;
 }
 
+/* ===== Featured Project Card ===== */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  color: #FFB03B;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+@media(min-width: 768px) {
+  .project-card {
+    flex-direction: row;
+  }
+  .project-card img {
+    width: 45%;
+    max-height: none;
+  }
+  .project-info {
+    width: 55%;
+  }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .hero h1 { font-size: 1.4rem; }
@@ -201,10 +242,7 @@ nav a.cv {
   <a href="certifications.html">Certifications</a>
   <a href="videos.html">Popular Videos</a>
   <a href="contact.html">Contact</a>
-  <a href=""
-     class="cv" target="_blank" rel="noopener">
-     CV
-  </a>
+  <a href="" class="cv" target="_blank" rel="noopener">CV</a>
 </nav>
 
 <!-- ===== Hero ===== -->
@@ -237,6 +275,25 @@ I hold a Master’s degree in Finance and Investment and have developed advanced
   <p>
 I am interested in roles that combine research, analytics, and operations, particularly those that value interdisciplinary skills, evidence-based decision-making, and collaboration across technical and non-technical teams.
   </p>
+</section>
+
+<!-- ===== Featured Broadcast & Live Operations ===== -->
+<section class="section">
+  <h2>Featured Operations & Broadcast Logistics</h2>
+  <p>
+    Highlights from recent high-stakes media infrastructure and live sports production contracts in Berlin, managing precision technical setups and cross-functional field operations.
+  </p>
+
+  <div class="project-card">
+    <img src="assets/host_union/host_union.jpg" alt="Broadcast Operations at Stadion An der Alten Försterei">
+    <div class="project-info">
+<h3>DFL Bundesliga & Cultural Broadcast Operations</h3>
+      <p><strong>Role:</strong> Broadcast Operations Support (fernsehkieker GmbH)</p>
+      <p>
+        Executed advanced on-site technical deployment, spatial coordination, and cable infrastructure support for high-profile live broadcasts—including ZDF cultural productions at the <strong>Konzerthaus Berlin</strong> (Gendarmenmarkt) and DFL Bundesliga matchdays (such as Union Berlin vs. Elversberg) in collaboration with Sportcast, Sky, DAZN, and ARD.
+      </p>
+    </div>
+  </div>
 </section>
 
 </body>
